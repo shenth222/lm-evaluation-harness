@@ -29,7 +29,7 @@ try:
     from vllm.lora.request import LoRARequest
     from vllm.transformers_utils.tokenizer import get_tokenizer
     from vllm.entrypoints.chat_utils import resolve_hf_chat_template
-except ModuleNotFoundError:
+except (ModuleNotFoundError, ImportError):
     pass
 
 if TYPE_CHECKING:
